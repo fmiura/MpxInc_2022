@@ -142,4 +142,5 @@ lognorm_ggplot <- ggplot(df, aes(x=inc_day)) +
 ###5. references -----
 #https://mc-stan.org/docs/2_29/functions-reference/lognormal.html
 #http://mc-stan.org/rstanarm/reference/loo.stanreg.html
+#https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2020.25.5.2000062 (Backer et al. 2020 Eurosurveillance)
 #https://mikuhatsune.hatenadiary.com/entry/2020/03/19/231812 (Japanese, to make three models at the same time)
