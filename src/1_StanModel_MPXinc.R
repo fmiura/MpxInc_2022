@@ -1,6 +1,6 @@
 ############################################################
 #Purpose: Estimating the incubation period for monkeypox cases in the Netherlands, 2022
-#Final edit: 29 March 2023
+#Final edit: 31 March 2023
 #Editor: Fumi Miura
 ############################################################
 ###Procedure
