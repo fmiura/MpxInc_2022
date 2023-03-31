@@ -1,6 +1,6 @@
 ############################################################
 #Purpose: Estimating the incubation period for monkeypox cases in the Netherlands, 2022
-#Final edit: 6 June 2022
+#Final edit: 29 March 2023
 #Editor: Fumi Miura
 ############################################################
 ###Procedure
@@ -66,7 +66,7 @@ pos <- mapply(function(z) rstan::extract(z)$par, fit, SIMPLIFY=FALSE)
 ###3. summary of model fits -----
 means <- cbind(pos$weibull[,2]*gamma(1+1/pos$weibull[,1]),
                pos$gamma[,1] / pos$gamma[,2],
-               exp(pos$lognormal[,1]))
+               exp(pos$lognormal[,1]+pos$lognormal[,2]^2/2))
 a_percentile <- c(0.025, 0.5, 0.975)
 res <- apply(means, 2, quantile, a_percentile)
 ll <- mapply(function(z) loo(extract_log_lik(z))$looic, fit)
